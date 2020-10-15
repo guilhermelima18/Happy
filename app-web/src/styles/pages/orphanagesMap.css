@@ -65,3 +65,30 @@
 .create-orphanage i {
     color: white;
 }
+
+.page-map .map-popup .leaflet-popup-content-wrapper {
+    color: #09C3C9;
+    height: 50px;
+    border-radius: 30px;
+    font-size: 18px;
+    font-style: italic;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.page-map .map-popup .leaflet-popup-content-wrapper a {
+    background-color: #09C3C9;
+    padding-top: 8px;
+    padding-bottom: 5px;
+    padding-left: 8px;
+    padding-right: 8px;
+    border-radius: 10px;
+    margin-left: 15px;
+    text-decoration: none;
+}
+
+.page-map .map-popup .leaflet-popup-content-wrapper a i {
+    font-size: 22px;
+    color: #F0F0F0;
+}

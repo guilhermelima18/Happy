@@ -3,8 +3,16 @@ import '../styles/global.css';
 import '../styles/pages/orphanagesMap.css';
 import MapMarkerImg from '../images/map-marker.svg';
 import { Link } from 'react-router-dom';
-import { Map, TileLayer } from 'react-leaflet';
+import { Map, TileLayer, Marker, Popup } from 'react-leaflet';
 import 'leaflet/dist/leaflet.css';
+import Leaflet from 'leaflet';
+
+const mapIcon = Leaflet.icon({
+    iconUrl: MapMarkerImg,
+    iconSize: [38, 48],
+    iconAnchor: [29, 68],
+    popupAnchor: [-10, -70],
+})
 
 function OrphanagesMap() {
     return (
@@ -18,16 +26,26 @@ function OrphanagesMap() {
                 </footer>
             </aside>
 
-            <Map 
-                center={[13.6571599,-69.718235]}
-                zoom={5}
-                style={{width: "70%", height: "100%"}}
-                >
-                    <TileLayer url="https://a.tile.openstreetmap.org/{z}/{x}/{y}.png" />
+            <Map
+                center={[-22.2934931, -48.56993]}
+                zoom={17}
+                style={{ width: "70%", height: "100%" }}
+            >
+                <TileLayer url="https://a.tile.openstreetmap.org/{z}/{x}/{y}.png" />
 
-                    {/* <TileLayer 
+                {/* <TileLayer 
                     url={`https://api.mapbox.com/styles/v1/mapbox/light-v10/tiles/256/{z}/{x}/{y}@2x?acess_token=${process.env.REACT_APP_MAPBOX_TOKEN}`} 
                     /> */}
+
+                <Marker
+                    icon={mapIcon}
+                    position={[-22.2934931, -48.56993]}
+                >
+                    <Popup closeButton={false} minWidth={200} maxWidth={250} className="map-popup">
+                        Lar das meninas
+                            <Link to=""><i className="fas fa-arrow-right"></i></Link>
+                    </Popup>
+                </Marker>
             </Map>
 
             <Link to="" className="create-orphanage"><i className="fas fa-plus"></i></Link>
