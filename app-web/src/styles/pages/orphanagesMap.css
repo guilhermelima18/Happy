@@ -26,16 +26,38 @@
     line-height: 48px;
 }
 
-.page-map aside p {
+.page-map aside p, a {
     font-size: 20px;
     line-height: 28px;
 }
 
-.page-map footer {
+.page-map aside footer {
     height: 20vh;
     display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.page-map aside footer a {
+    text-decoration: none;
+    background-color: #FFD666;
+    width: 70px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 25px;
+    transition: 300ms;
+}
+
+.page-map aside footer a:hover {
+    background-color: #f1c64f;
+}
+
+.page-map aside footer a i {
+    font-size: 30px;
+    color: #09a3c9;
 }
 
 .page-map .leaflet-container {

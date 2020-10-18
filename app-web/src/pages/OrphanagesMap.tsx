@@ -39,6 +39,7 @@ function OrphanagesMap() {
                 <p>Muitas crianças estão esperando a sua visita :)</p>
                 <footer>
                     <p>Jaú, São Paulo</p>
+                    <a href="/"><i className="fas fa-arrow-circle-left"></i></a>
                 </footer>
             </aside>
 
